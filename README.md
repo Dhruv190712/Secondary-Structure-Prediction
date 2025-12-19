@@ -4,24 +4,24 @@ A simple implementation of the Chou–Fasman algorithm for protein secondary-str
 
 ---
 
-## 🔧 Overview
+##  Overview
 
 This repository contains a small Python implementation (file: `choufasman.python`) of the Chou–Fasman rules to predict alpha-helices (H) and beta-strands (S) from a single-sequence of amino-acids. The program identifies nucleation sites, extends them, and resolves conflicts where helix and strand predictions overlap.
 
-## ✅ Features
+##  Features
 
 - Uses standard Chou–Fasman propensity tables for residues (Pa for helices and Pb for strands).
 - Detects helix nucleation windows (6 residues, ≥4 with Pa ≥ 1) and strand nucleation windows (5 residues, ≥3 with Pb ≥ 1).
 - Extends predicted regions using sliding 4-residue average threshold (average > 1).
 - Resolves overlapping helix/strand segments by comparing summed propensities.
 
-## 🧪 Requirements
+##  Requirements
 
 - Python 3.x
 
 > Note: the main file is named `choufasman.python`. To import it as a module you may want to rename it to `choufasman.py` first, or run it directly as a script.
 
-## ▶️ Usage (interactive)
+## Usage (interactive)
 
 Run the script and paste/type a single-line amino-acid sequence (single-letter uppercase codes):
 
@@ -42,7 +42,7 @@ It prints:
 - Predicted strands (start-end: sequence)
 - Final secondary structure string where H = helix, S = strand, - = neither
 
-## 🧾 Example
+## Example
 
 If you use the included long example sequence (commented inside the file), the program prints detected helix/strand regions and a final structure map like:
 
@@ -80,4 +80,4 @@ Other notes:
 - The script is small and intended for educational/demonstration use — it is not optimized for performance or large-scale batch predictions.
 
 
-Happy predicting! 🔬
+Happy predicting! 
